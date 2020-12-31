@@ -1,3 +1,3 @@
 const Index = () => <div>Hee</div>
 
-export default Index
+export default Index  
