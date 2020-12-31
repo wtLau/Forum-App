@@ -12,5 +12,5 @@ export default {
   entities: [Post, User],
   dbName: 'forum-app',
   type: 'postgresql',
-  debug: true,
+  debug: !__prod__,
 } as Parameters<typeof MikroORM.init>[0]
