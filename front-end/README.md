@@ -1,23 +1,60 @@
-# Example app with [chakra-ui](https://github.com/chakra-ui/chakra-ui)
+# Forum-App/Front-End
 
-This example features how to use [chakra-ui](https://github.com/chakra-ui/chakra-ui) as the component library within a Next.js app.
+This is a tutorial app from [Ben Awad] (<https://github.com/benawad/lireddit>).
 
-We are connecting the Next.js `_app.js` with `chakra-ui`'s Theme and ColorMode containers so the pages can have app-wide dark/light mode. We are also creating some components which shows the usage of `chakra-ui`'s style props.
+A fullstack project course that teaches you how to build a backend and frontend from scratch then deploy it.
 
-## Deploy your own
+[Live Website Link: Coming Soon](www.brian-lau.ca)
 
-Deploy the example using [Vercel](https://vercel.com):
+---
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-chakra-ui)
+## Preview
 
-## How to use
+### Desktop- Home Page
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+---IMAGE GOES HERE---
+<img src="./src/assets/readme/preview1.png" width="270px" alt="sgsc mobile screenshot">
 
-```bash
-npx create-next-app --example with-chakra-ui with-chakra-ui-app
-# or
-yarn create next-app --example with-chakra-ui with-chakra-ui-app
-```
+---
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Getting Started
+
+### 1. Download or Clone from Github
+
+Go into the file directory and
+
+run `cd Forum-App/`
+
+#### 2. Install the dev dependencies
+
+Run `npm install`; install the node modules you'll need for the application
+
+### Starting the Project
+
+`yarn start`
+
+---
+
+## Built With
+
+- React
+- TypeScript
+- GraphQL
+- URQL/Apollo
+- Node.js
+- PostgreSQL
+- MikroORM/TypeORM
+- Redis
+- Next.js
+- TypeGraphQL
+- Chakra
+
+---
+
+## Developed By
+
+- Brian Lau [GitHub](https://github.com/wtLau)
+
+## Credited to
+
+- Ben Awad [GitHub](https://github.com/benawad)
