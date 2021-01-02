@@ -8,7 +8,9 @@
       "es2017",
       "esnext.asynciterable"
     ],
+    "strict": true,
     "sourceMap": true,
+    "skipLibCheck": true,
     "outDir": "./dist",
     "moduleResolution": "node",
     "removeComments": true,
