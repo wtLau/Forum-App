@@ -1,21 +1,10 @@
-# Forum-App
+# Forum-App_Back-END
 
 This is a tutorial app from [Ben Awad] (https://github.com/benawad/lireddit).
 
-A fullstack project course that teaches you how to build a backend and frontend from scratch then deploy it. 
+A fullstack project course that teaches you how to build a backend and frontend from scratch then deploy it.
 
 [Live Website Link: Coming Soon](www.brian-lau.ca)
-
----
-
-## Preview
-
-### Desktop- Home Page
-
----IMAGE GOES HERE---
-<img src="./src/assets/readme/preview1.png" width="270px" alt="sgsc mobile screenshot">
- 
----
 
 ## Getting Started
 
@@ -54,7 +43,6 @@ Run `npm install`; install the node modules you'll need for the application
 ## Developed By
 
 - Brian Lau [GitHub](https://github.com/wtLau)
-
 
 ## Credited to
 

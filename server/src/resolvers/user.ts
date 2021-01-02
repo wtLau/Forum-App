@@ -56,16 +56,22 @@ export class UserResolver {
   ): Promise<UserResponse> {
 
     if (options.username.length <= 2) {
-      errors: [{
-        field: 'username',
-        message: 'length must be greater than 2'
-      }]
+      return {
+        errors: [
+          {
+            field: "username",
+            message: "length must be greater than 2",
+          },
+        ],
+      };
     }
     if (options.password.length <= 2) {
-      errors: [{
-        field: 'password',
-        message: 'length must be greater than 2'
-      }]
+      return {
+        errors: [{
+          field: 'password',
+          message: 'length must be greater than 2'
+        }]
+      }
     }
 
     const hashedPassword = await argon2.hash(options.password)
