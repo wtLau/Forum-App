@@ -27,11 +27,17 @@ run `cd Forum-App/`
 
 #### 2. Install the dev dependencies
 
-Run `npm install`; install the node modules you'll need for the application
+Run `yarn install`; install the node modules you'll need for the application
 
 ### Starting the Project
 
 `yarn start`
+
+### Install Database
+
+Install postgres, redis
+
+`createdb forum-app`
 
 ---
 
