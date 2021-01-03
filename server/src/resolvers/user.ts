@@ -1,23 +1,24 @@
-import { MyContext } from "src/types";
+import { MyContext } from "../types";
 import { Arg, Ctx, Field, InputType, Mutation, ObjectType, Query, Resolver } from "type-graphql";
 import argon2 from 'argon2'
 import { User } from "../entities/User";
 import { EntityManager } from '@mikro-orm/postgresql'
+import { COOKIE_NAME } from "../constants";
 
 @InputType()
 class UsernamePasswordInput {
   @Field()
-  username: string
+  username!: string
   @Field()
-  password: string
+  password!: string
 }
 
 @ObjectType()
 class FieldError {
   @Field()
-  field: string
+  field!: string
   @Field()
-  message: string
+  message!: string
 }
 
 @ObjectType()
@@ -37,7 +38,6 @@ export class UserResolver {
   async me(
     @Ctx() { req, em }: MyContext
   ) {
-
     // Not Logged In Condition
     if (!req.session.userId) {
       return null
@@ -140,5 +140,22 @@ export class UserResolver {
     return {
       user
     }
+  }
+
+  // Log Out Resolver
+  @Mutation(() => Boolean)
+  logout(
+    @Ctx() { req, res }: MyContext
+  ) {
+    return new Promise(resolve => req.session.destroy(err => {
+      res.clearCookie(COOKIE_NAME)
+      if (err) {
+        console.log(err)
+        resolve(false)
+        return
+      }
+
+      resolve(true)
+    }))
   }
 }
