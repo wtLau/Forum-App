@@ -16,6 +16,7 @@ import {
 } from 'urql'
 import {
   LoginMutation,
+  LogoutMutation,
   MeDocument,
   MeQuery,
   RegisterMutation,
@@ -46,6 +47,23 @@ const client = createClient({
     cacheExchange({
       updates: {
         Mutation: {
+          logout: (
+            _result,
+            args,
+            cache,
+            info
+          ) => {
+            betterUpdateQuery<
+              LogoutMutation,
+              MeQuery
+            >(
+              cache,
+              { query: MeDocument },
+              _result,
+              () => ({ me: null })
+            )
+          },
+
           login: (_result, args, cache, info) => {
             betterUpdateQuery<
               LoginMutation,
@@ -80,11 +98,11 @@ const client = createClient({
               { query: MeDocument },
               _result,
               (result, query) => {
-                if (result.login.errors) {
+                if (result.register.errors) {
                   return query
                 } else {
                   return {
-                    me: result.login.user,
+                    me: result.register.user,
                   }
                 }
               }
